@@ -1,0 +1,130 @@
+:root {
+  --primary-dark: #333;
+  --primary-light: #ededed;
+  --secondary-light: #fefefe;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+  font-family: 'Roboto', sans-serif;
+  /* position: relative; */
+}
+
+button, 
+input {
+  width: 100%;
+  border: none;
+  color: var(--primary-dark);
+  cursor: pointer;
+}
+
+button {
+  padding: 10px 20px;
+  border: 1px solid var(--primary-dark);
+  border-radius: 7px;
+}
+
+button.active {
+  background-color: var(--primary-dark);
+  color: var(--primary-dark);
+}
+
+#color-picker {
+  -webkit-appearance: none;
+  width: 80px;
+  height: 80px;
+  border: none;
+}
+
+#color-picker::-webkit-color-swatch {
+  border: none;
+  border-radius: 50px;
+}
+
+#color-picker::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+button,
+#color-picker {
+  transition: transform 0.1s ease-in-out;
+}
+
+button:hover,
+#color-picker:hover {
+  transform: scale(1.05);
+}
+
+#color-picker:active {
+  transition: transform 0.05s ease-in-out;
+  transform: scale(1);
+}
+
+header {
+  padding: 20px 0;
+}
+
+.title {
+  margin: 0;
+  text-align: center;
+  font-size: 80px;
+}
+
+main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 100px;
+  max-width: 1100px;
+  margin: 20px auto 0 auto;
+}
+
+#settings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 200px;
+}
+
+#grid-size {
+  margin-bottom: -15px;
+  font-size: 20px;
+}
+
+#grid-size-slider {
+  -webkit-appearance: none;
+}
+
+#grid-size-slider::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  height: 15px;
+  border: 1px solid var(--primary-dark);
+  border-radius: 25px;
+  background-color: var(--secondary-light);
+}
+
+#grid-size-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  margin-top: -4px;
+  border-radius: 25px;
+  background: var(--primary-dark);
+}
+
+#grid {
+  display: grid;
+  width: 500px;
+  height: 500px;
+  background-color: var(--secondary-light);
+}

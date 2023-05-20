@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Etch-a-sketch</title>
+
+  <link rel="stylesheet" href="css/noramlize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1 class="title">Etch-a-sketch</h1>
+  </header>
+
+  <main>
+    <div id="settings">
+      <input type="color" id="color-picker" value="">
+      <button id="color-btn">pick a color</button>
+      <button id="rainbow-btn">RAINBOW</button>
+      <button id="eraser-btn">eraser</button>
+      <button id="clear-btn">clear</button>
+      <div id="grid-size">16 x 16</div>
+      <input type="range" id="grid-size-slider" value="16" min="1" max="100">
+    </div>
+    
+    <div id="grid"></div>
+  </main>
+
+  <footer>
+    <p>
+      Copyright ©
+      <script>document.write(new Date().getFullYear())</script>
+      Nedal-Esrar
+    </p>
+  </footer>
+</body>
+</html>
