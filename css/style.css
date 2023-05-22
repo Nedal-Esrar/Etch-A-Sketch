@@ -4,7 +4,9 @@
   --secondary-light: #fefefe;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -15,7 +17,6 @@ body {
   background-color: var(--primary-light);
   color: var(--primary-dark);
   font-family: 'Roboto', sans-serif;
-  /* position: relative; */
 }
 
 button, 
@@ -117,7 +118,7 @@ main {
   -webkit-appearance: none;
   width: 24px;
   height: 24px;
-  margin-top: -4px;
+  margin-top: -5px;
   border-radius: 25px;
   background: var(--primary-dark);
 }
@@ -127,4 +128,63 @@ main {
   width: 500px;
   height: 500px;
   background-color: var(--secondary-light);
+}
+
+.grid-cell {
+  user-select: none;
+}
+
+footer {
+  font-size: 20px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100vw;
+  padding-bottom: 10px;
+  padding-top: 50px;
+}
+
+@media (max-width: 1200px) {
+  main {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 850px) {
+  main {
+    gap: 50px;
+  }
+
+  #settings {
+    width: 150px;
+    gap: 16px;
+  }
+
+  #grid-size {
+    margin-bottom: -4px;
+  }
+
+  #grid {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 650px) {
+  .title {
+    font-size: 50px;
+  }
+
+  main {
+    flex-direction: column-reverse;
+  }
+
+  #grid {
+    width: 300px;
+    height: 300px;
+  }
 }
