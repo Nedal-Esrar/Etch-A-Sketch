@@ -12,11 +12,16 @@
   margin: 0;
 }
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
-  min-height: 100vh;
   background-color: var(--primary-light);
   color: var(--primary-dark);
   font-family: 'Roboto', sans-serif;
+  margin-bottom: 100px;
 }
 
 button, 
@@ -144,8 +149,7 @@ footer {
   align-items: center;
   gap: 10px;
   width: 100vw;
-  padding-bottom: 10px;
-  padding-top: 50px;
+  padding: 10px;
 }
 
 @media (max-width: 1200px) {
