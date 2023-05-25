@@ -18,7 +18,7 @@ const modeBtns = new Map([
 ]);
 
 const btnColor = new Map([
-  ['color', () => drawingColor],
+  ['color', () => colorPicker.value],
   ['rainbow', () => `rgb(${getRandomDeg()}, ${getRandomDeg()}, ${getRandomDeg()})`],
   ['erase', () => DEFAULT_GRID_CELL_COLOR]
 ]);
